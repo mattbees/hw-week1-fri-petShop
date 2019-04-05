@@ -52,6 +52,30 @@ myFunctions = {
 
   addPetToStock(shop, pet) {
     shop.pets.push(pet); // newPet object is declared in beforeEach statement
+  },
+
+  getCustomersCash(custArrIndex) {
+    return custArrIndex.cash;
+  },
+
+  getCustomersCashTotal(customerArray) {
+    let custCash = 0;
+    for (let customer of customerArray) {
+      custCash += customer.cash;
+    }
+    return custCash;
+  },
+
+  removeCustomerCash(customerIndex, amount) {
+    customerIndex.cash -= amount;
+  },
+
+  getCustomerPetCount(customerIndex) {
+    return customerIndex.pets.length;
+  },
+
+  addPetToCustomer(customerIndex, pet) {
+    customerIndex.pets.push(pet);
   }
 
 };
