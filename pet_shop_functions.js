@@ -84,6 +84,13 @@ myFunctions = {
     } else {
       return true;
     }
+  },
+
+  sellPetToCustomer(shop, item, customerIndex) {
+    myFunctions.addPetToCustomer(customerIndex, item);
+    myFunctions.increasePetsSold(shop, 1);
+    myFunctions.removeCustomerCash(customerIndex, item.price);
+    myFunctions.addOrRemoveCash(shop, item.price);
   }
 
 };

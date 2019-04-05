@@ -171,14 +171,14 @@ describe('pet shop', () => {
     expect(myFunctions.customerCanAffordPet(customers[1], newPet)).toBeFalsy();
   });
 
-  xtest('customer CAN afford a pet', () => {;
+  test('customer CAN afford a pet', () => {;
     expect(myFunctions.customerCanAffordPet(customers[0], newPet)).toBeTruthy();
   });
 
   // These are 'integration' tests so we want multiple assertions.
   // If one fails the entire test should fail
 
-  xtest('customer can buy a pet', () => {
+  test('customer can buy a pet', () => {
     var customer = customers[0];
     var pet = myFunctions.getPetByName(petShop, "Arthur");
     myFunctions.sellPetToCustomer(petShop, pet, customer);
