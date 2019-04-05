@@ -76,6 +76,12 @@ myFunctions = {
 
   addPetToCustomer(customerIndex, pet) {
     customerIndex.pets.push(pet);
+  },
+
+  customerCanAffordPet(customerIndex, pet) {
+    if ((customerIndex.cash - pet.price) < 0) {
+      return false;
+    }
   }
 
 };

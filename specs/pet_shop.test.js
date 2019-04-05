@@ -167,7 +167,7 @@ describe('pet shop', () => {
 
   // EXTENSIONS
 
-  xtest('customer CANT afford a pet', () => {;
+  test('customer CANT afford a pet', () => {;
     expect(myFunctions.customerCanAffordPet(customers[1], newPet)).toBeFalsy();
   });
 
