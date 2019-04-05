@@ -87,7 +87,7 @@ myFunctions = {
   },
 
   sellPetToCustomer(shop, item, customerIndex) {
-    if (item) {
+    if (item && myFunctions.customerCanAffordPet(customerIndex, item)) {
       myFunctions.addPetToCustomer(customerIndex, item);
       myFunctions.increasePetsSold(shop, 1);
       myFunctions.removeCustomerCash(customerIndex, item.price);
