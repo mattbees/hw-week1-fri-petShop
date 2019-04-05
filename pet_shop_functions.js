@@ -81,6 +81,8 @@ myFunctions = {
   customerCanAffordPet(customerIndex, pet) {
     if ((customerIndex.cash - pet.price) < 0) {
       return false;
+    } else {
+      return true;
     }
   }
 
