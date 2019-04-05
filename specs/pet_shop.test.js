@@ -189,7 +189,7 @@ describe('pet shop', () => {
     expect(myFunctions.getTotalCash(petShop)).toBe(1900);
   });
 
-  xtest('customer cant buy a pet that doesnt exist', () => {
+  test('customer cant buy a pet that doesnt exist', () => {
     var customer = customers[0];
     var pet = myFunctions.getPetByName(petShop, "Dave");
     myFunctions.sellPetToCustomer(petShop, pet, customer);
